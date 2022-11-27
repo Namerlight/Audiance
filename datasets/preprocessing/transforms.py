@@ -4,8 +4,9 @@ from torchvision import transforms
 # A dict listing all the transforms for datasets we might want to use.
 transforms_dict = {
     "gtzan_spectrograms":  [
-                        transforms.ToTensor(),
-                    ],
+        transforms.Resize([128, 128]),
+        transforms.ToTensor(),
+    ],
 }
 
 def image_transforms(dataset_name: str) -> transforms.Compose:

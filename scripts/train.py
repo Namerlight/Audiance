@@ -6,7 +6,7 @@ import torch
 if __name__ == '__main__':
 
     hyperparameters = {
-        "epochs": 50,
+        "epochs": 10,
         "lr": 5e-4,
         "loss_func": torch.nn.CrossEntropyLoss()
     }
@@ -18,7 +18,5 @@ if __name__ == '__main__':
     }
 
     model = models.CustomMLP()
-
     trainer = run.Trainer(model=model, hyperparameters=hyperparameters, data=data)
-
     trainer.train()

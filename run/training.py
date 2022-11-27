@@ -64,7 +64,7 @@ class Trainer:
             self.train_loss.append((running_loss / total_step).detach().cpu())
             self.train_acc.append((100 * correct / total))
 
-            print(f'\ntrain-loss: {np.mean(self.train_loss):.4f},')
-            print(f'train-acc: {np.mean(self.train_acc):.4f}')
+        print(f'\ntrain-loss: {np.mean(self.train_loss):.4f},')
+        print(f'train-acc: {np.mean(self.train_acc):.4f}')
 
         utils.plot_loss_accuracy(self.train_loss, self.train_acc, self.train_loss, self.train_acc)
