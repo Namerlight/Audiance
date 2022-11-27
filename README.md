@@ -66,6 +66,7 @@ tbd
 | GTZAN   | [Dataset on Kaggle](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) | Yes, it's not a *great* dataset but it's a classic one. Train/Test/Val Split was done manually but I may add a splitting script later |
 
 ## Folder Structure
+Somewhat tentative and may change in the future.
 ```
 │
 ├─── data\
@@ -73,21 +74,28 @@ tbd
 │    └─── other datasets\
 │
 ├─── datasets\
+│    ├─── preprocessing\
+│    │    ├─── __init__.py
+│    │    └─── transforms.py
 │    ├─── __init__.py
-│    └─── embolden.py
+│    └─── gtzan_dataset.py
 │
 ├─── models\
-│    ├─── __init__.py
-│    └─── embolden.py
+│    ├─── classify\
+│    │    ├─── __init__.py
+│    │    ├─── custom_mlp.py
+│    │    └─── pretrained_model.py
+│    └─── generate\
+│         ├─── __init__.py
+│         └─── coming_soon.py
 │
 ├─── output\
-│    ├─── results.py
-│    └─── saved_models.py
+│    ├─── results\
+│    └─── saved_models\
 │
-├─── run\
+├─── trainers\
 │    ├─── __init__.py
-│    ├─── evaluation.py
-│    └─── training.py
+│    └─── classification_trainer.py
 │
 ├─── scripts\
 │    ├─── evaluate.py
